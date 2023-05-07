@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./component/navBar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import QuienesSomos from "./pages/quienesSomos";
+import Servicios from "./pages/servicios";
+import Contacto from "./pages/contacto";
+import Wats from "./component/watsButton";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <NavBar/>
+    <Routes>
+    <Route path="/" element={<Home/>} ></Route>
+      <Route path="/home" element={<Home/>} ></Route>
+      <Route path="/quienessomos" element={<QuienesSomos/>} ></Route>
+      <Route path="/servicios" element={<Servicios/>} ></Route>
+      <Route path="/contacto" element={<Contacto/>} ></Route>
+    </Routes>
+    <Wats/>
+    </>
+  )
 }
 
 export default App;

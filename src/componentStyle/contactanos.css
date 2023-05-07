@@ -1,0 +1,23 @@
+.figure{
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 45%;
+}
+
+.figure1{
+    position: absolute;
+    margin-top: 15%;
+    max-width: 50%;
+    max-height: 50%;
+    padding: 5%;
+}
+
+.lead{
+    width: fit-content;
+
+}
+
+.container{
+    margin-top: 50%;
+    position: absolute;
+}
